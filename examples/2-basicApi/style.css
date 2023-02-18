@@ -1,0 +1,27 @@
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 5rem;
+  gap: 1rem;
+}
+.item {
+  width: clamp(300px, 30%, 800px);
+}
+.results img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.item-desc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-top: 1rem;
+}
+.price {
+  color: #b661b4;
+  font-weight: bold;
+}
