@@ -3,6 +3,7 @@
 1. [x] Create netlify.toml file
 2. [x] Create Functions directory
 3. [x] Install netlify cli as dev dependencies
+4. []
 
 ## URL
 
@@ -27,3 +28,32 @@ to = "/.netlify/functions/:splat";
 ```
 
 - after reddirects url looks like "/api/1-hello"
+
+## Comunicate with Airtable
+
+- Package `airtable-node`
+
+```js
+const airtable = new Airtable({ apiKey: "YOUR_API_KEY" })
+  .base("YOUR_ID_BASE")
+  .table("YOUR TABLE NAME");
+```
+
+-
+
+## Method of airtable
+
+- airtable.list()
+- ```js
+  const { records } = await airtable.list();
+  ```
+
+```
+
+```
+
+- airtable.retrieve()
+
+```js
+const { records } = await airtable.list();
+```
