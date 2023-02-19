@@ -13,7 +13,6 @@ const fetchData = async () => {
 };
 fetchData();
 function displayData(data) {
-  console.log(data);
   const items = data
     .map((item) => {
       const { id, Name: name, url, price } = item;
@@ -27,5 +26,4 @@ function displayData(data) {
     })
     .join("");
   results.innerHTML = items;
-  console.log(items);
 }
