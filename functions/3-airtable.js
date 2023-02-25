@@ -10,9 +10,13 @@ exports.handler = async (event, context) => {
       const { id } = item;
       const { Name, images, price } = item.fields;
       const url = images[0].url;
-      return { id, Name, url, price };
+      console.log(images.thumbnails);
+      return { id, Name, url, price, images };
     });
     return {
+      headers: {
+        "Access-Control-Allow-Origin": "*",
+      },
       statusCode: 200,
       body: JSON.stringify(products),
     };
