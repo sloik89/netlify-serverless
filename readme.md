@@ -57,3 +57,17 @@ const airtable = new Airtable({ apiKey: "YOUR_API_KEY" })
 ```js
 const { records } = await airtable.list();
 ```
+
+### Allow diffrent app acess data
+
+- need to add headers in return
+
+```js
+return {
+  headers: {
+    "Access-Control-Allow-Origin": "*",
+  },
+  statusCode: 200,
+  body: JSON.stringify(product.fields),
+};
+```
