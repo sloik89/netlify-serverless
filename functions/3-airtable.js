@@ -8,10 +8,21 @@ exports.handler = async (event, context) => {
     const { records } = await airtable.list();
     const products = records.map((item) => {
       const { id } = item;
-      const { Name, images, price, featured, category, colors } = item.fields;
+      const { Name, images, price, featured, category, colors, company } =
+        item.fields;
       const url = images[0].url;
       console.log(featured);
-      return { id, Name, url, price, images, featured, category, colors };
+      return {
+        id,
+        Name,
+        url,
+        price,
+        images,
+        featured,
+        category,
+        colors,
+        company,
+      };
     });
     return {
       headers: {
